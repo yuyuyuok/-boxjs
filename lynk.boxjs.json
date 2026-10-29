@@ -1,0 +1,39 @@
+{
+  "id": "com.lynkco.sign.boxjs",
+  "name": "领克签到",
+  "author": "ChatGPT（基于用户提供的开源项目改造）",
+  "description": "领克签到 Loon 脚本配置项",
+  "apps": [
+    {
+      "id": "lynkco-sign",
+      "name": "领克签到",
+      "keys": [
+        "lynk_refresh_token",
+        "lynk_device_id"
+      ],
+      "settings": [
+        {
+          "id": "lynk_refresh_token",
+          "name": "refreshToken",
+          "val": "",
+          "type": "textarea",
+          "placeholder": "bearerxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+          "rows": 3,
+          "autoGrow": true,
+          "desc": "从你自己的领克 APP 登录接口获取。属于敏感凭据，不要分享给他人。"
+        },
+        {
+          "id": "lynk_device_id",
+          "name": "deviceId",
+          "val": "",
+          "type": "text",
+          "placeholder": "填写领克 APP 登录请求中的 deviceId",
+          "desc": "与 refreshToken 对应的设备 ID。"
+        }
+      ],
+      "author": "基于用户提供的开源项目移植",
+      "repo": "https://github.com/yujiejobs/lynk_sign_docker",
+      "script": "lynk_sign.js"
+    }
+  ]
+}
